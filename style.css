@@ -19,3 +19,60 @@
 #box-6, #box-7, #box-9, #box-10{
     background-color: brown;
 }
+
+.header, .navbar, .main, .sidebar, .advertis, .footer{
+    background-color: blueviolet;
+    padding: 10px;
+}
+.header{
+    grid-area: header;
+}
+.navbar{
+    grid-area: navbar;
+}
+.main{
+    grid-area: main;
+}
+.sidebar{
+    grid-area: sidebar;
+}
+.advertis{
+    grid-area: advertis;
+}
+.footer{
+    grid-area: footer;
+}
+.container2{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "header header header header"
+    "navbar main main aside"
+    "navbar main main advertis"
+    "footer footer footer footer"
+    ;
+}
+
+@media screen and (max-width: 576px) {
+    .container2{
+        grid-template-areas: 
+        "header "
+        "navbar "
+        "main"
+        "aside"
+        "advertis"
+        "footer"
+        ;
+    }
+}
+@media screen and (min-width: 577px) and (max-width: 922px){
+    .container2{
+        grid-template-areas: 
+        "header header header"
+        "navbar navbar navbar"
+        "aside main main"
+        "advertis main main"
+        "footer footer footer"
+        ;
+    }
+}
