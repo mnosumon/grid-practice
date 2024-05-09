@@ -1,0 +1,21 @@
+.container{
+    display: grid;
+    /* grid-template-columns: repeat(4, 200px);  200px mane holo per box 200 kore width pabe */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    background-color: azure;
+    gap: 20px;
+}
+.box{
+    background-color: gray;
+    text-align: center;
+}
+#box-1{
+    grid-row: span 5;
+}
+#box-11, #box-12{
+    grid-column: span 3;
+}
+#box-6, #box-7, #box-9, #box-10{
+    background-color: brown;
+}
